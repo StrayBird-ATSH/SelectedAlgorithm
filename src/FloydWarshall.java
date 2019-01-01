@@ -2,15 +2,15 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 
-public class Main {
+public class FloydWarshall {
 
     public static void main(String[] args) {
         int[][] W = {
-                {0, 3, 8, 10, -4},
-                {10, 0, 10, 1, 7},
-                {10, 4, 0, 10, 10},
-                {2, 10, -5, 0, 10},
-                {10, 10, 10, 6, 0}
+                {0, 3, 7, 10, 10},
+                {10, 0, 10, -1, 6},
+                {10, 8, 0, -4, 10},
+                {10, 10, 11, 0, 9},
+                {-5, 10, 2, 10, 0}
         };
         W = floyd_warshall(W);
         for (int[] row : W)
