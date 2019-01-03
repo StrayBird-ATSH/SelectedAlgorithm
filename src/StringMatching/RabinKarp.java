@@ -18,12 +18,9 @@ public class RabinKarp {
             p = (d * p + P.charAt(i)) % q;
             t[0] = (d * t[0] + T.charAt(i)) % q;
         }
-        for (int s = 0; s < n - m; s++) {
-            if (p == t[s])
-                if (P.substring(1, m).equals(T.substring(s + 1, s + m)))
-                    System.out.println("Pattern occurs with shift " + s);
-            if (s < n - m)
-                t[s + 1] = (d * (t[s] - T.charAt(s + 1) * h) + T.charAt(s + m + 1)) % q;
+        for (int s = 0; s < n - m + 1; s++) {
+            if (p == t[s]) if (P.equals(T.substring(s, s + m))) System.out.println("Pattern occurs with shift " + s);
+            if (s < n - m) t[s + 1] = (d * (t[s] - T.charAt(s) * h) + T.charAt(s + m)) % q;
         }
     }
 }
