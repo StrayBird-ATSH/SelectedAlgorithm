@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class RabinKarp {
     public static void main(String[] args) {
-
+        RabinKarpMatcher("abcdejiklakdkdjfabcdef", "jiklakdkdj", Character.MAX_VALUE, 10000019);
     }
 
     private static void RabinKarpMatcher(@NotNull String T, @NotNull String P, int d, int q) {
