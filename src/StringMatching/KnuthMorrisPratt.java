@@ -1,3 +1,5 @@
+package StringMatching;
+
 import org.jetbrains.annotations.NotNull;
 
 public class KnuthMorrisPratt {
