@@ -1,5 +1,6 @@
 package minimumSpanningTree;
 
+import org.jetbrains.annotations.NotNull;
 import utils.EdgeWeightComparator;
 import utils.Graph;
 
@@ -13,7 +14,7 @@ public class Kruskal {
     public static void main(String[] args) {
     }
 
-    List MSTKruskal(Graph G, TreeMap<Graph.Edge, Integer> w) {
+    static List MSTKruskal(@NotNull Graph G, TreeMap<Graph.Edge, Integer> w) {
         ArrayList<Graph.Edge> A = new ArrayList<>();
         for (Graph.Vertex v : G.V)
             makeSet(v);

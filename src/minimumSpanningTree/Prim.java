@@ -1,5 +1,6 @@
 package minimumSpanningTree;
 
+import org.jetbrains.annotations.NotNull;
 import utils.Graph;
 import utils.VertexKeyComparator;
 
@@ -10,7 +11,7 @@ public class Prim {
 
     }
 
-    void MSTPrim(Graph G, int[][] w, Graph.Vertex r) {
+    static void MSTPrim(@NotNull Graph G, int[][] w, Graph.Vertex r) {
         for (Graph.Vertex u : G.V) {
             u.key = Integer.MAX_VALUE;
             u.pi = null;
