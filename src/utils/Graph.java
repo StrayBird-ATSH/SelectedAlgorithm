@@ -25,6 +25,13 @@ public class Graph {
         }
     }
 
+    public Edge getEdge(Vertex u, Vertex v) {
+        for (Edge edge : E)
+            if (edge.u == u && edge.v == v || edge.u == v && edge.v == u) return edge;
+        return null;
+    }
+
+
     public class Vertex {
         public Vertex p; /* This attribute is for disjoint set operations */
         public int rank; /* This attribute is for disjoint set operations */
