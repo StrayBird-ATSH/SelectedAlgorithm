@@ -9,6 +9,8 @@ public class Graph {
     public class Vertex {
         public Vertex p; /* This attribute is for disjoint set operations */
         public int rank; /* This attribute is for disjoint set operations */
+        public int key;
+        public Vertex pi;
     }
 
     public class Edge {
