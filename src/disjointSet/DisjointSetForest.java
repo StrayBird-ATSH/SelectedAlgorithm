@@ -13,7 +13,7 @@ public class DisjointSetForest {
         link(findSet(x), findSet(y));
     }
 
-    public static void link(@NotNull Graph.Vertex x, @NotNull Graph.Vertex y) {
+    private static void link(@NotNull Graph.Vertex x, @NotNull Graph.Vertex y) {
         if (x.rank > y.rank) y.p = x;
         else {
             x.p = y;

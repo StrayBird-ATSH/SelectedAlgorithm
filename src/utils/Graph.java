@@ -11,6 +11,7 @@ public class Graph {
         public int rank; /* This attribute is for disjoint set operations */
         public int key;
         public Vertex pi;
+        public ArrayList<Vertex> adj;
     }
 
     public class Edge {

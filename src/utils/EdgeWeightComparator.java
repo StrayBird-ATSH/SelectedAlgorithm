@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.TreeMap;
 
 public class EdgeWeightComparator implements Comparator<Graph.Edge> {
-    TreeMap<Graph.Edge, Integer> w;
+    private TreeMap<Graph.Edge, Integer> w;
 
     public EdgeWeightComparator(TreeMap<Graph.Edge, Integer> w) {
         this.w = w;
