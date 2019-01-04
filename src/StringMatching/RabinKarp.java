@@ -10,9 +10,9 @@ public class RabinKarp {
     private static void RabinKarpMatcher(@NotNull String T, @NotNull String P, int d, int q) {
         int n = T.length();
         int m = P.length();
-        int h = (int) Math.pow(d, m - 1) % q;
+        long h = (long) Math.pow(d, m - 1) % q;
         int p = 0;
-        int[] t = new int[n];
+        long[] t = new long[n];
         t[0] = 0;
         for (int i = 0; i < m; i++) {
             p = (d * p + P.charAt(i)) % q;
