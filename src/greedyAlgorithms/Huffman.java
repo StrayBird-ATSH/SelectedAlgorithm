@@ -1,4 +1,4 @@
-package GreedyAlgorithms;
+package greedyAlgorithms;
 
 import org.jetbrains.annotations.NotNull;
 

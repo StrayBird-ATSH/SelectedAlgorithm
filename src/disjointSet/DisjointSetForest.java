@@ -1,7 +1,7 @@
-package DisjointSet;
+package disjointSet;
 
-import Utils.Graph;
 import org.jetbrains.annotations.NotNull;
+import utils.Graph;
 
 public class DisjointSetForest {
     public static void makeSet(@NotNull Graph.Vertex x) {

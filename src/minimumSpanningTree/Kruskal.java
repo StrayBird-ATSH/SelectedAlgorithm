@@ -1,13 +1,13 @@
-package MinimumSpanningTree;
+package minimumSpanningTree;
 
-import Utils.Graph;
+import utils.Graph;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.TreeMap;
 
-import static DisjointSet.DisjointSetForest.*;
+import static disjointSet.DisjointSetForest.*;
 
 public class Kruskal {
     public static void main(String[] args) {

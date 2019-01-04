@@ -1,4 +1,4 @@
-package StringMatching;
+package stringMatching;
 
 import org.jetbrains.annotations.NotNull;
 
