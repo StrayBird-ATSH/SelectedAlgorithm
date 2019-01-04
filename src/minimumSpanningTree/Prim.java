@@ -1,6 +1,7 @@
 package minimumSpanningTree;
 
 import utils.Graph;
+import utils.VertexKeyComparator;
 
 import java.util.PriorityQueue;
 import java.util.TreeMap;
@@ -16,6 +17,10 @@ public class Prim {
             u.pi = null;
         }
         r.key = 0;
-        PriorityQueue<Graph.Vertex> vertices = new PriorityQueue<>();
+        PriorityQueue<Graph.Vertex> Q = new PriorityQueue<>(new VertexKeyComparator());
+        Q.addAll(G.V);
+        while (!Q.isEmpty()) {
+            Graph.Vertex u = Q.poll();
+        }
     }
 }
