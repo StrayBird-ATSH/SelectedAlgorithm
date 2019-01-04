@@ -1,4 +1,4 @@
-package stringMatching;
+package allPairsShortestPath;
 
 import org.jetbrains.annotations.NotNull;
 
