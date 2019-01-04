@@ -5,8 +5,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class Graph {
-    public ArrayList<Vertex> V = new ArrayList<>();
+    public ArrayList<Vertex> V;
     public ArrayList<Edge> E = new ArrayList<>();
+
+    public Graph(int vertexNumber) {
+        V = new ArrayList<>(vertexNumber);
+        for (int i = 0; i < vertexNumber; i++)
+            V.add(new Vertex());
+    }
 
     public static void initializeSingleSource(@NotNull Graph G, Vertex s) {
         for (Vertex v : G.V) {
@@ -23,6 +29,13 @@ public class Graph {
             v.d = u.d + edge.weight;
             v.pi = u;
         }
+    }
+
+    public void constructGraph(int[][] edgeWeight) {
+        for (int i = 0; i < edgeWeight.length; i++)
+            for (int j = 0; j < edgeWeight[0].length; j++)
+                if (edgeWeight[i][j] != 0)
+                    E.add(new Edge(V.get(i), V.get(j), edgeWeight[i][j]));
     }
 
     public Edge getEdge(Vertex u, Vertex v) {
@@ -45,5 +58,11 @@ public class Graph {
         public Vertex u;
         public Vertex v;
         public int weight;
+
+        Edge(Vertex u, Vertex v, int weight) {
+            this.u = u;
+            this.v = v;
+            this.weight = weight;
+        }
     }
 }
